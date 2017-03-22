@@ -1,0 +1,154 @@
+// site-wide form styles
+
+// get rid of "default" iOS button styling for submit buttons
+input[type=submit] {
+  appearance: none;
+}
+
+input[type="submit"],
+button[type="submit"] {
+  @include button-form;
+}
+
+// remove the "spinner" from number fields
+input[type="number"] {
+  @include remove-spinners;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="url"],
+textarea {
+  padding: 0.5em 0.65em;
+  border-radius: 2px;
+  color: $text-color-subtle;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  border: 1px $border-color solid;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+form label {
+  display: block;
+}
+
+
+///// Form Layout
+
+form .input {
+  margin-bottom: 1em;
+}
+
+.label-text {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 0.875em;
+}
+
+input + .label-text {
+  display: inline-block;
+}
+
+.legend-text {
+  display: inline-block;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.two-up {
+  @include clearfix;
+
+  > .input {
+    @include column(6);
+    margin-right: 0;
+    margin-left: $gutter-width;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.two-up-wider {
+  @include clearfix;
+
+  @include breakpoint($breakpoint-s) {
+    > .input {
+      @include column(6);
+      margin-right: 0;
+      margin-left: $gutter-width;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.three-up {
+  @include clearfix;
+
+  .input {
+    @include column(4);
+    margin-right: 0;
+    margin-left: $gutter-width;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &.zip-city-state {
+    // general input is the city
+    .input {
+      @include column(7);
+
+      @include breakpoint($breakpoint-s) {
+        @include column(6);
+      }
+
+      // first child is the zip
+      &:first-child {
+        @include column(12);
+        @include last;
+
+        @include breakpoint($breakpoint-s) {
+          @include column(3);
+        }
+      }
+
+      // select is the state
+      // .state may be a text field for certain countries
+      &.select, .state {
+        @include column(5);
+        @include last;
+
+        @include breakpoint($breakpoint-s) {
+          @include column(3);
+          @include last;
+        }
+      }
+    }
+  }
+}
+
+.three-up-wider {
+  @include clearfix;
+
+  .input {
+    @include breakpoint($breakpoint-s) {
+      @include column(4);
+      margin-right: 0;
+      margin-left: $gutter-width;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "stubble",
+  "description": "A front-end starter kit from Bearded",
+  "authors": [
+    "Bearded"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/beardedstudio/stubble",
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "normalize-css": "^5.0.0"
+  }
+}

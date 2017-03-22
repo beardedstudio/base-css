@@ -1,0 +1,19 @@
+{
+  "name": "stubble",
+  "version": "1.0.0",
+  "description": "A front-end starter kit from Bearded",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beardedstudio/stubble.git"
+  },
+  "author": "Bearded",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beardedstudio/stubble/issues"
+  },
+  "homepage": "https://github.com/beardedstudio/stubble#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-wiredep": "^3.0.1"
+  }
+}
