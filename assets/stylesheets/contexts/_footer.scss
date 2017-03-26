@@ -12,10 +12,10 @@
 
   .social-media {
     li {
-      @include inline-block;
+      display: inline-block;
 
       a {
-        @include inline-block;
+        display: inline-block;
         @include button-reverse;
       }
     }
