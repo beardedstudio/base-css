@@ -9,9 +9,9 @@ $grid_width: ((($column_width+($gutter_width))*$columns)-$gutter_width);
 
 // A 16-column version of the grid:
 
-// $gutter_width: 4%;
+// $gutter_width: 2.5%;
 // $columns: 16;
-// $column_width: 2.5%;
+// $column_width: 4%;
 // $grid_width: ((($column_width+($gutter_width))*$columns)-$gutter_width);
 
 @mixin container($max-width: 65em) {
@@ -131,7 +131,7 @@ $grid_width: ((($column_width+($gutter_width))*$columns)-$gutter_width);
     @include last;
     float: right;
   }
-  
+
   &:nth-of-type(8n+9) {
     clear: both;
   }
